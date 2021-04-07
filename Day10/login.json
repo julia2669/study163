@@ -1,0 +1,65 @@
+﻿{
+    "item": [
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "password": "admin",
+                    "sex": "男",
+                    "age": 18
+                },
+                "headers":{
+                    "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response":
+                {
+                    "message": {
+                        "username": "您的用户名验证错误"
+                    }
+                }
+
+        },
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "username": "admin",
+                    "sex": "男",
+                    "age": 18
+                },
+                "headers":{
+                    "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response":
+                {
+                    "message": {
+                        "password": "账户密码不能为空"
+                    }
+                }
+
+        },
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "username": "wuya",
+                    "password": "admin",
+                    "sex": "aaa",
+                    "age": 18
+                },
+                "headers":{
+	                "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response":
+                {
+                    "message": {
+                        "sex": "性别只能是男或者女"
+                    }
+                }
+
+        }
+    ]
+}

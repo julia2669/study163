@@ -1,0 +1,65 @@
+﻿{
+    "item": [
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "password": "admin",
+                    "sex": "男",
+                    "age": 18
+                },
+                "headers":{
+                    "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response": [
+                {
+                    "message": {
+                        "username": "用户名不能为空"
+                    }
+                }
+            ]
+        },
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "username": "admin",
+                    "sex": "男",
+                    "age": 18
+                },
+                "headers":{
+                    "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response": [
+                {
+                    "message": {
+                        "password": "密码不能为空"
+                    }
+                }
+            ]
+        },
+        {
+            "request": {
+                "url": "http://localhost:5000/login",
+                "body": {
+                    "username": "wuya",
+                    "password": "admin",
+                    "sex": "aaa",
+                    "age": 18
+                },
+                "headers":{
+	                "Content-Type":"application/json;charset=UTF-8"
+                }
+            },
+            "response": [
+                {
+                    "message": {
+                        "sex": "性别为男或者女"
+                    }
+                }
+            ]
+        }
+    ]
+}

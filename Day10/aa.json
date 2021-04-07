@@ -1,0 +1,38 @@
+﻿{
+    "item": [
+        {
+            "request": {
+                "url": "http://116.62.132.145:9090/v5/login",
+                "body": {
+                    "password": "admin",
+                    "sex": "男",
+                    "age": 18
+                }
+            },
+            "response": [
+                {
+                    "message": {
+                        "username": "用户名不能为空"
+                    }
+                }
+            ]
+        },
+        {
+            "request": {
+                "url": "http://116.62.132.145:9090/v5/login",
+                "body": {
+                    "username": "admin",
+                    "sex": "男",
+                    "age": 18
+                }
+            },
+            "response": [
+                {
+                    "message": {
+                        "password": "密码不能为空"
+                    }
+                }
+            ]
+        }
+    ]
+}
